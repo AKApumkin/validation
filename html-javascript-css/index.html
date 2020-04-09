@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+    _   _  __   _                   _   _      
+   /_\ | |/ /  /_\  _ __ _  _ _ __ | |_(_)_ _  
+  / _ \| ' <  / _ \| '_ \ || | '  \| / / | ' \ 
+ /_/ \_\_|\_\/_/ \_\ .__/\_,_|_|_|_|_\_\_|_||_|
+                   |_|                          
+-->
+<html lang="en">
+<head>
+    <title>Validation Example</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is a description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+    <!-- hidden fields, for multilingual support change the value to the required language -->
+    <input type="hidden" name="errorEmpty" value="This field can not be empty." />
+    <input type="hidden" name="errorSpecial" value="This field can not contain invalid characters." />
+    <input type="hidden" name="errorUnknown" value="Something went wrong please try again." />
+    <input type="hidden" name="errorCaptcha" value="The captcha entered was inncorrect." />
+    <input type="hidden" name="erroFullName" value="Please enter your full name" />
+    <input type="hidden" name="errorEmail" value="Please enter a valid email address." />
+    <input type="hidden" name="errorPhone" value="Please enter a valid phone number." />
+    <input type="hidden" name="errorAgree" value="Please check the box to agree to the Terms and Conditions." />
+</body>
+<!-- Always take security seriously -->
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+<!-- include a secure version of JQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+<!-- include validator -->
+<script src="/js/validator.js"></script>
+<!--include intilization script -->
+<script src="/js/validator.js"></script>
+
+

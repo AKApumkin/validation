@@ -1,0 +1,32 @@
+doctype html  
+html(lang='en')
+    //
+           _   _  __   _                   _   _      
+          /_\ | |/ /  /_\  _ __ _  _ _ __ | |_(_)_ _  
+         / _ \| ' <  / _ \| '_ \ || | '  \| / / | ' \ 
+        /_/ \_\_|\_\/_/ \_\ .__/\_,_|_|_|_|_\_\_|_||_|
+                        |_|                          
+    head
+        title Validation
+        meta(charset="UTF-8")  
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="this is a description")  
+        meta(http-equiv="X-UA-Compatible" content="IE=9;IE=10;IE=Edge,chrome=1")
+        link(rel="stylesheet" type="text/css" href="styles/main.css")
+        link(href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet")
+    body
+        div.mainContent
+            block content
+        input(type="hidden" name="errorEmpty" value="This field can not be empty.")
+        input(type="hidden" name="errorSpecial" value="This field can not contain invalid characters.")
+        input(type="hidden" name="errorUnknown" value="Something went wrong please try again.")
+        input(type="hidden" name="errorCaptcha" value="The captcha entered was inncorrect.")
+        input(type="hidden" name="errorFullName" value="Please enter your full name")
+        input(type="hidden" name="errorEmail" value="Please enter a valid email address.")
+        input(type="hidden" name="errorPhone" value="Please enter a valid phone number.")
+        input(type="hidden" name="errorAgree" value="Please check the box to agree to the Terms and Conditions.")
+        input(type="hidden" name="errorRadio" value="Please select one of the options from below")
+    script(src="js/libraries.js")
+    script(src="js/components.js")
+    script(src="js/validator.js")
+    block scripts
