@@ -30,5 +30,8 @@
     "pxtorem": "^1.0.0",
     "typescript": "^3.5.3",
     "yargs": "^14.0.0"
+  },
+  "devDependencies": {
+    "gulp-jasmine": "^4.0.0"
   }
 }

@@ -20,6 +20,7 @@ const connect      = require('gulp-connect');
 const clean        = require('gulp-clean');
 const gfi          = require("gulp-file-insert");
 const uglify       = require('gulp-uglify');
+const jasmine      = require('gulp-jasmine');
 
 // updates the cache buster for live reload
 let cache_buster;
@@ -180,6 +181,13 @@ function clean_jsTemp_folder() {
     return src('js-temp', {read: false })
     .pipe(clean());
 }
+
+// unit tests
+function unit_test() {
+    return src('spec/test.js')
+        // gulp-jasmine works on filepaths so you can't have any plugins before it
+        .pipe(jasmine())
+}
  
 // scafolding tool for easy page and component creation. commands are `gulp build --page new` or `gulp build --component other`
 function create() {
@@ -243,3 +251,4 @@ exports.default =
         )
     );
 exports.build = create;
+exports.unit_test = unit_test;
